@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "f23427ea-1b27-4f4f-9071-5cc6d04bf603",
+		"name": "Expedition-v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35332692"
+	},
+	"item": [
+		{
+			"name": "Create Expedition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeId\": \"6650c9d13ae88ebdbe043reh\",\n    \"zonalofficeId\": \"6650c9d13ae88ebdbe0b31bf\",\n    \"departmentId\": \"6650c9d13ae88ebdbe0b31bf\",\n    \"divisionId\": \"6650c9d13ae88ebdbe0b31bf\",\n    \"districtId\": \"6650c9d13ae88ebdbe0b31bf\",\n    \"postalCode\": 123456,\n    \"location\": \"123 Main St, Springfield\",\n    \"expeditionDate\": \"2024-06-03\",\n    \"startTime\": \"2024-06-03\",\n    \"isLateSubmit\": false,\n    \"isEnded\": false\n}"
+				},
+				
+				"url": {
+					"raw": "http://localhost:7041/exp/crt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7041",
+					"path": [
+						"exp",
+						"crt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ongoing Expedition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+
+
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeId\": \"6650c9d13ae88ebdbe0b31ef\"\n   }"
+				},
+
+				"url": {
+					"raw": "http://localhost:7041/exp/ongoing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7041",
+					"path": [
+						"exp",
+						"ongoing"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+

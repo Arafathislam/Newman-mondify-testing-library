@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Test Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+        pre { white-space: pre-wrap; word-wrap: break-word; }
+    </style>
+</head>
+<body>
+    <h1>API Test Report</h1>
+    {{#each executions}}
+    <h2>{{itemName}}</h2>
+    <table>
+        <tr>
+            <th>Request Method</th>
+            <td>{{request.method}}</td>
+        </tr>
+        <tr>
+            <th>Request URL</th>
+            <td>{{request.url}}</td>
+        </tr>
+        <tr>
+            <th>Request Headers</th>
+            <td><pre>{{json request.headers}}</pre></td>
+        </tr>
+        <tr>
+            <th>Request Body</th>
+            <td><pre>{{request.body}}</pre></td>
+        </tr>
+        <tr>
+            <th>Response Code</th>
+            <td>{{response.code}}</td>
+        </tr>
+        <tr>
+            <th>Response Status</th>
+            <td>{{response.status}}</td>
+        </tr>
+        <tr>
+            <th>Response Body</th>
+            <td><pre>{{response.body}}</pre></td>
+        </tr>
+    </table>
+    {{/each}}
+</body>
+</html>
